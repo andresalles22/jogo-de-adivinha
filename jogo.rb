@@ -1,13 +1,32 @@
 puts "Nome: "
 nome = gets
 
-puts "Chute : "
-numero=gets.chomp.to_i
-
 numero2=151
 
+for contador in 1..4 do
+puts "Chute #{contador}: "
+numero=gets.chomp.to_i
 
-puts nome
-puts numero == numero2
+if numero == numero2
+system("clear")
+puts "Jogo de Adivinhação"
+puts "Seu nome: #{nome}"
+puts "Seu chute foi correto!!"
+break
+
+elsif numero > numero2
+system("clear")
+puts "Jogo de Adivinhação"
+puts"Seu numero eh maior, chute outro mais baixo!!"
+
+elsif numero < numero2
+system("clear")
+puts "Jogo de Adivinhação"
+puts "Seu numero eh menor, chute outro mais alto!!"
+
+end
+
+end
+
 
 
